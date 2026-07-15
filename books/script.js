@@ -1,17 +1,3 @@
-// 유튜브 URL에서 video ID 추출 (watch?v=, youtu.be/, 파라미터 포함 모두 대응)
-function getYoutubeId(url) {
-  if (!url) return null;
-  const patterns = [
-    /(?:youtube\.com\/watch\?v=)([^&?/]+)/,
-    /(?:youtu\.be\/)([^&?/]+)/,
-  ];
-  for (const p of patterns) {
-    const m = url.match(p);
-    if (m) return m[1];
-  }
-  return null;
-}
-
 const grid = document.getElementById("song-grid");
 const emptyState = document.getElementById("empty-state");
 const resultCount = document.getElementById("result-count");
@@ -36,41 +22,48 @@ function buildTabs() {
   });
 }
 
-function cardHtml(book) {
-  const id = getYoutubeId(book.url);
-  const thumb = id ? `https://img.youtube.com/vi/${id}/mqdefault.jpg` : "";
-  const koLink = book.koUrl
-    ? `<a class="ko-link" href="${book.koUrl}" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation()">한국어 리드얼라우드 보기</a>`
-    : "";
-
-  if (!book.url) {
+function readRowHtml(url, label, title) {
+  if (!url) {
     return `
-      <div class="song-card no-link">
-        <div class="thumb-wrap no-thumb">
-          <span class="no-thumb-label">영상 준비중</span>
-        </div>
-        <div class="card-body">
-          <span class="card-category">${book.author}</span>
-          <span class="card-title">${book.title}</span>
-          <span class="card-desc">${book.desc}</span>
-        </div>
+      <div class="read-row disabled">
+        <span class="read-row-icon">📖</span>
+        <span class="read-row-text">
+          <span class="read-row-label">${label}</span>
+          <span class="read-row-title">영상 준비중</span>
+        </span>
       </div>
     `;
   }
+  return `
+    <a class="read-row" href="${url}" target="_blank" rel="noopener noreferrer">
+      <span class="read-row-icon">📖</span>
+      <span class="read-row-text">
+        <span class="read-row-label">${label}</span>
+        <span class="read-row-title">${title}</span>
+      </span>
+      <span class="read-row-chevron">›</span>
+    </a>
+  `;
+}
+
+function cardHtml(book) {
+  const cover = book.cover
+    ? `<img src="${book.cover}" alt="${book.title} 표지" loading="lazy">`
+    : `<span class="book-cover-fallback">📕</span>`;
+
+  const koRow = book.koUrl ? readRowHtml(book.koUrl, "READ ALOUD (한국어)", book.title) : "";
 
   return `
-    <a class="song-card" href="${book.url}" target="_blank" rel="noopener noreferrer">
-      <div class="thumb-wrap">
-        ${thumb ? `<img src="${thumb}" alt="${book.title} 썸네일" loading="lazy">` : ""}
-        <div class="play-overlay"><span>▶</span></div>
+    <div class="book-card">
+      <div class="book-cover-wrap">${cover}</div>
+      <div class="book-info">
+        <span class="book-title">${book.title}</span>
+        <span class="book-author">${book.author}</span>
+        <span class="book-desc">${book.desc}</span>
       </div>
-      <div class="card-body">
-        <span class="card-category">${book.author}</span>
-        <span class="card-title">${book.title}</span>
-        <span class="card-desc">${book.desc}</span>
-        ${koLink}
-      </div>
-    </a>
+      ${readRowHtml(book.url, "READ ALOUD", book.title)}
+      ${koRow}
+    </div>
   `;
 }
 
