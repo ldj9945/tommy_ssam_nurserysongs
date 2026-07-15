@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>토미쌤 잉글리시 | 영어 동요 100 리스트</title>
+<meta name="description" content="영유아를 위한 영어 동요 100곡을 주제별로 정리한 검색 가능한 목록. 클릭하면 유튜브 영상으로 바로 이동합니다.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="brand">
+        <span class="brand-badge">토미쌤 잉글리시</span>
+        <h1>영유 아이들이 매일 듣는<br>영어 동요 영상 100</h1>
+        <p class="tagline">주제별로 정리한 영어 동요, 제목을 클릭하면 유튜브로 이동해요</p>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="tip-box">
+      <div class="tip-title">활용 팁</div>
+      <ul>
+        <li>처음에는 영상 길이보다 반복 노출이 더 중요해요.</li>
+        <li>한 주제에서 2~3곡만 골라 꾸준히 들려주세요!</li>
+      </ul>
+    </section>
+
+    <section class="controls">
+      <div class="search-wrap">
+        <input id="search-input" type="text" placeholder="곡 제목이나 설명으로 검색해보세요 (예: 알파벳, 동물, 색깔...)" autocomplete="off">
+        <span class="search-icon">🔍</span>
+      </div>
+      <div id="category-tabs" class="category-tabs"></div>
+    </section>
+
+    <section class="result-info">
+      <span id="result-count"></span>
+    </section>
+
+    <section id="song-grid" class="song-grid"></section>
+
+    <div id="empty-state" class="empty-state" hidden>
+      <p>검색 결과가 없어요 🐣</p>
+      <p class="empty-sub">다른 검색어나 카테고리를 선택해보세요.</p>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>토미쌤 잉글리시 &middot; 영어 동요 100 리스트</p>
+  </footer>
+
+  <script src="data.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

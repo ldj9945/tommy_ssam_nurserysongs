@@ -1,0 +1,162 @@
+// 토미쌤 잉글리시 - 영어 동요 100 리스트 데이터
+// 각 곡: category(카테고리), title(제목), desc(간단 설명), url(유튜브 링크)
+
+const CATEGORIES = [
+  "너서리라임",
+  "알파벳",
+  "수",
+  "색",
+  "도형",
+  "나 & 몸",
+  "가족",
+  "주변환경",
+  "음식",
+  "동물",
+  "감정",
+  "기본표현",
+];
+
+const SONGS = [
+  // 0. 너서리라임
+  { category: "너서리라임", title: "Teddy Bear, Teddy Bear, Say Goodnight", desc: "곰 인형과 잠자리 표현", url: "https://www.youtube.com/watch?v=GIn080lzV-s" },
+  { category: "너서리라임", title: "Star Light, Star Bright", desc: "별과 소원 표현", url: "https://www.youtube.com/watch?v=OWip7yvXukI" },
+  { category: "너서리라임", title: "Rain, Rain, Go Away", desc: "비 오는 날 표현", url: "https://www.youtube.com/watch?v=qkixvVaM4z4" },
+  { category: "너서리라임", title: "Six in the Bed", desc: "숫자와 침대 놀이", url: "https://www.youtube.com/watch?v=Qm2nSu4zD1Q" },
+  { category: "너서리라임", title: "Hickory Dickory Dock", desc: "시계와 리듬 익히기", url: "https://youtu.be/HGgsklW-mtg" },
+  { category: "너서리라임", title: "If You're Happy and You Know It", desc: "감정과 동작 표현", url: "https://www.youtube.com/watch?v=1iKJz02kUik" },
+  { category: "너서리라임", title: "The Wheels on the Bus", desc: "버스와 움직임 표현", url: "https://youtu.be/yWirdnSDsV4" },
+  { category: "너서리라임", title: "Three Little Kittens", desc: "아기 고양이 이야기", url: "https://www.youtube.com/watch?v=k6X2wJ6L0SY" },
+  { category: "너서리라임", title: "Row, Row, Row Your Boat", desc: "배 타기 리듬 놀이", url: "https://www.youtube.com/watch?v=kbyktxNRBxs" },
+  { category: "너서리라임", title: "Head, Shoulders, Knees, and Toes", desc: "몸 부위 익히기", url: "https://www.youtube.com/watch?v=f0BG900WwrA" },
+  { category: "너서리라임", title: "Twinkle, Twinkle, Little Star", desc: "별을 주제로 한 동요", url: "https://www.youtube.com/watch?v=WWQk5Z2PGq8" },
+  { category: "너서리라임", title: "Humpty Dumpty", desc: "리듬감 있는 전래 동요", url: "https://www.youtube.com/watch?v=FKyoK6MsvhQ" },
+  { category: "너서리라임", title: "Five Little Monkeys", desc: "숫자와 반복 표현", url: "https://www.youtube.com/watch?v=FeMtSB0h49k" },
+  { category: "너서리라임", title: "Itsy Bitsy Spider", desc: "거미와 동작 표현", url: "https://www.youtube.com/watch?v=Yoj8eWJhIvA" },
+  { category: "너서리라임", title: "BINGO", desc: "동물 이름 철자 익히기", url: "https://youtu.be/9mmF8zOlh_g" },
+  { category: "너서리라임", title: "Walking Walking", desc: "걷기와 움직임 표현", url: "https://youtu.be/fPMjnlTEZwU" },
+  { category: "너서리라임", title: "Down by the Station", desc: "기차와 장소 표현", url: "https://youtu.be/CwsWYrv1b_w" },
+  { category: "너서리라임", title: "Buckle My Shoe", desc: "숫자와 운율 익히기", url: "https://www.youtube.com/watch?v=9emejrkZN2o" },
+  { category: "너서리라임", title: "Five Little Friends", desc: "친구와 숫자 표현", url: "https://www.youtube.com/watch?v=Pn8pg-rwhSA" },
+
+  // 1. 알파벳
+  { category: "알파벳", title: "Sing the Alphabet", desc: "알파벳 이름과 순서 익히기", url: "https://youtu.be/U0aaaKPg9PA" },
+  { category: "알파벳", title: "Badanamu Alphabet Song", desc: "알파벳 이름과 순서 익히기", url: "https://www.youtube.com/watch?v=fMGO-uE3m48" },
+  { category: "알파벳", title: "Badanamu Alphabet Song Remake", desc: "알파벳 이름과 순서 익히기", url: "https://www.youtube.com/watch?v=qKtDxBOxIXI" },
+  { category: "알파벳", title: "Badanamu ABC Song", desc: "알파벳 이름과 순서 익히기", url: "https://www.youtube.com/watch?v=uegsScsI7aI" },
+  { category: "알파벳", title: "TRACE & SING the Alphabet (Uppercase)", desc: "알파벳 이름과 순서 익히기", url: "https://www.youtube.com/watch?v=d8pW4l3gbhw" },
+  { category: "알파벳", title: "TRACE & SING the Alphabet (Lowercase)", desc: "알파벳 이름과 순서 익히기", url: "https://www.youtube.com/watch?v=HJC3Bvyv_BA" },
+  { category: "알파벳", title: "The Alphabet Chant + More", desc: "알파벳 이름과 순서 익히기", url: "https://youtu.be/cR-Qr1V8e_w" },
+
+  // 2. 수
+  { category: "수", title: "NUMBERS 1-10 Math Song", desc: "숫자 세기 연습", url: "https://youtu.be/PPshbCYh1sY" },
+  { category: "수", title: "One Little Finger", desc: "손가락으로 수 개념 익히기", url: "https://youtu.be/eBVqcTEC3zQ" },
+  { category: "수", title: "Five Little Ducks", desc: "숫자와 반복 패턴 익히기", url: "https://youtu.be/pZw9veQ76fo" },
+  { category: "수", title: "Five Little Monkeys", desc: "숫자와 반복 표현", url: "https://youtu.be/ZhODBFQ2-bQ" },
+  { category: "수", title: "Six In The Bed", desc: "숫자와 침대 놀이", url: "https://youtu.be/0ARbIcYtSIg" },
+  { category: "수", title: "The Ants Go Marching 2", desc: "숫자와 반복 패턴 익히기", url: "https://youtu.be/XXRiX8W83CA" },
+  { category: "수", title: "Seven Steps", desc: "숫자 개념 익히기", url: "https://youtu.be/kz_EQSfFx0g" },
+  { category: "수", title: "Here Is The Beehive", desc: "숫자와 반복 패턴 익히기", url: "https://youtu.be/V5Bs9xydba0" },
+  { category: "수", title: "10 Little Dinosaurs 2", desc: "숫자와 반복 패턴 익히기", url: "https://youtu.be/TlRHqE6VodQ" },
+  { category: "수", title: "The Bananas Song", desc: "숫자와 반복 패턴 익히기", url: "https://youtu.be/Vr-L6q4vbWU" },
+  { category: "수", title: "How Many Fingers?", desc: "손가락으로 수 개념 익히기", url: "https://youtu.be/xNw1SSz18Gg" },
+  { category: "수", title: "Count And Move (HD)", desc: "숫자 세기 연습", url: "https://youtu.be/Aq4UAss33qA" },
+  { category: "수", title: "Numberblobs | Learn to Count", desc: "숫자 세기 연습", url: "https://youtu.be/aqMh7Bd5DCw" },
+  { category: "수", title: "Numberblocks Songs | One Hundred", desc: "숫자 세기 연습", url: "https://youtu.be/l9-liPFndl8" },
+  { category: "수", title: "Numbers & Counting Badanamu Compilation", desc: "숫자 세기 연습", url: "https://www.youtube.com/watch?v=r6XyiAQJOb0" },
+
+  // 3. 색
+  { category: "색", title: "Color Song", desc: "색깔 이름 익히기", url: "https://www.youtube.com/watch?v=j70UiColJgc" },
+  { category: "색", title: "Do You Know Your Colors?", desc: "색깔 이름 익히기", url: "https://youtu.be/VMmPYQa2rts" },
+  { category: "색", title: "Mixing Colors", desc: "색깔 이름 익히기", url: "https://youtu.be/TBtTWjagd_Y" },
+  { category: "색", title: "What's Your Favorite Color?", desc: "색깔 이름 익히기", url: "https://youtu.be/zxIpA5nF_LY" },
+  { category: "색", title: "I See Something Blue", desc: "색깔 이름 익히기", url: "https://youtu.be/jYAWf8Y91hA" },
+  { category: "색", title: "I See Something Pink", desc: "색깔 이름 익히기", url: "https://youtu.be/Asb8N0nz9OI" },
+  { category: "색", title: "Red Yellow Green Blue", desc: "색깔 이름 익히기", url: "https://youtu.be/aMTIm-D1l54" },
+
+  // 4. 도형
+  { category: "도형", title: "Shape Song", desc: "도형 이름과 패턴 익히기", url: "https://www.youtube.com/watch?v=SDUXFkmKFyU" },
+  { category: "도형", title: "Patterns and Shapes", desc: "도형 이름과 패턴 익히기", url: "https://www.youtube.com/watch?v=yU0z7yeLyvA" },
+  { category: "도형", title: "The Shape Song #1", desc: "도형 이름과 패턴 익히기", url: "https://youtu.be/TJhfl5vdxp4" },
+  { category: "도형", title: "The Shape Song #2", desc: "도형 이름과 패턴 익히기", url: "https://youtu.be/03pyY9C2Pm8" },
+  { category: "도형", title: "Shapes Are All Around", desc: "도형 이름과 패턴 익히기", url: "https://youtu.be/lcl8uB2AWM0" },
+
+  // 5. 나 & 몸
+  { category: "나 & 몸", title: "Head Shoulders Knees And Toes", desc: "나와 몸 관련 표현 익히기", url: "https://youtu.be/RuqvGiZi0qg" },
+  { category: "나 & 몸", title: "Hello!", desc: "나와 몸 관련 표현 익히기", url: "https://youtu.be/32ysrBC6B6k" },
+  { category: "나 & 몸", title: "Body Parts Song", desc: "나와 몸 관련 표현 익히기", url: "https://www.youtube.com/watch?v=SZ2qkpPCBmw" },
+  { category: "나 & 몸", title: "I Like Me", desc: "나와 몸 관련 표현 익히기", url: "https://www.youtube.com/watch?v=ZE8y018oq_c" },
+  { category: "나 & 몸", title: "Me!", desc: "나와 몸 관련 표현 익히기", url: "https://www.youtube.com/watch?v=R1Hrkqep8nU" },
+  { category: "나 & 몸", title: "This Is My Face", desc: "나와 몸 관련 표현 익히기", url: "https://www.youtube.com/watch?v=8ChQVaEAKsk" },
+  { category: "나 & 몸", title: "Head Shoulders Knees & Toes (Speeding Up)", desc: "나와 몸 관련 표현 익히기", url: "https://www.youtube.com/watch?v=WX8HmogNyCY" },
+
+  // 6. 가족
+  { category: "가족", title: "I Love My Family", desc: "가족 구성원 익히기", url: "https://www.youtube.com/watch?v=AIgJJV6-stM" },
+  { category: "가족", title: "Together We are a Family", desc: "가족 구성원 익히기", url: "https://www.youtube.com/watch?v=S_FYvbRbfAo" },
+  { category: "가족", title: "The People In My Family", desc: "가족 구성원 익히기", url: "https://www.youtube.com/watch?v=yDua9ms9_eg" },
+  { category: "가족", title: "Finger Family Song", desc: "가족 구성원 익히기", url: "https://www.youtube.com/watch?v=G6k7dChBaJ8" },
+  { category: "가족", title: "Sesame Street: Family Song", desc: "가족 구성원 익히기", url: "https://www.youtube.com/watch?v=ii_LtHrEiao" },
+
+  // 7. 주변환경 (날씨, 행동, 월, 요일)
+  { category: "주변환경", title: "We All Fall Down", desc: "주변환경 표현 익히기", url: "https://youtu.be/JRMAptlBgTk" },
+  { category: "주변환경", title: "Skidamarink", desc: "주변환경 표현 익히기", url: "https://youtu.be/ug1pI-Ephns" },
+  { category: "주변환경", title: "How's The Weather?", desc: "날씨 표현 익히기", url: "https://youtu.be/rD6FRDd9Hew" },
+  { category: "주변환경", title: "The Months Chant", desc: "반복 리듬으로 익히기", url: "https://youtu.be/gtc4c1JlAEM" },
+  { category: "주변환경", title: "Days Of The Week Song", desc: "요일 표현 익히기", url: "https://youtu.be/loINl3Ln6Ck" },
+  { category: "주변환경", title: "Weather Song", desc: "날씨 표현 익히기", url: "https://www.youtube.com/watch?v=JfcJ4yfMtMY" },
+  { category: "주변환경", title: "The Days of the Week", desc: "요일 표현 익히기", url: "https://www.youtube.com/watch?v=uCwb4INhLts" },
+  { category: "주변환경", title: "Months of the Year", desc: "월 이름 익히기", url: "https://www.youtube.com/watch?v=6EQL5HVil2U" },
+  { category: "주변환경", title: "Community Helpers", desc: "주변 직업과 역할 익히기", url: "https://www.youtube.com/watch?v=qjaw_a17zmE" },
+
+  // 8. 음식
+  { category: "음식", title: "Bada's Fruit and Vegetables", desc: "과일과 채소 이름 익히기", url: "https://www.youtube.com/watch?v=iIXjWJEjB00" },
+  { category: "음식", title: "Do You Like Spaghetti Yogurt?", desc: "음식 관련 표현 익히기", url: "https://www.youtube.com/watch?v=ddDN30evKPc" },
+  { category: "음식", title: "Are You Hungry?", desc: "음식 관련 표현 익히기", url: "https://www.youtube.com/watch?v=34P24YLCRhM" },
+  { category: "음식", title: "If You Like Pasta", desc: "음식 관련 표현 익히기", url: "https://www.youtube.com/watch?v=UXt2bNp77u0" },
+  { category: "음식", title: "The Ice Cream Song", desc: "음식 관련 표현 익히기", url: "https://youtu.be/KbrSWbuWtmc" },
+  { category: "음식", title: "What's Your Favorite Flavor Of Ice Cream?", desc: "음식 관련 표현 익히기", url: "https://youtu.be/uWegqqriRw0" },
+  { category: "음식", title: "Apples & Bananas", desc: "음식 관련 표현 익히기", url: "https://youtu.be/r5WLXZspD1M" },
+
+  // 9. 동물
+  { category: "동물", title: "The Animals On The Farm", desc: "동물 이름과 소리 익히기", url: "https://youtu.be/zXEq-QO3xTg" },
+  { category: "동물", title: "I Have A Pet", desc: "동물 이름과 소리 익히기", url: "https://youtu.be/pWepfJ-8XU0" },
+  { category: "동물", title: "What Do You Hear?", desc: "동물 관련 표현 익히기", url: "https://youtu.be/YVgv1EFJZHc" },
+  { category: "동물", title: "Let's Go To The Zoo", desc: "동물 이름과 소리 익히기", url: "https://youtu.be/OwRmivbNgQk" },
+  { category: "동물", title: "The Bees Go Buzzing", desc: "동물 이름과 소리 익히기", url: "https://youtu.be/bWUgZm_AE64" },
+  { category: "동물", title: "Yes, I Can!", desc: "동물 관련 표현 익히기", url: "https://youtu.be/_Ir0Mc6Qilo" },
+  { category: "동물", title: "A Sailor Went To Sea", desc: "동물 관련 표현 익히기", url: "https://youtu.be/nFxAiWkSePk" },
+  { category: "동물", title: "The Jellyfish", desc: "동물 이름과 소리 익히기", url: "https://youtu.be/494e4txpwSg" },
+  { category: "동물", title: "All Kinds of Animals", desc: "동물 이름과 소리 익히기", url: "https://www.youtube.com/watch?v=98pUlBrs5G4" },
+  { category: "동물", title: "Zoo Party", desc: "동물 이름과 소리 익히기", url: "https://www.youtube.com/watch?v=lAwez-22-Cw" },
+  { category: "동물", title: "Duck, Duck, Goose!", desc: "숫자와 반복 패턴 익히기", url: "https://www.youtube.com/watch?v=Ue0fLUGkBRY" },
+
+  // 10. 감정
+  { category: "감정", title: "Happy Sad Silly Mad", desc: "감정 단어와 표정 익히기", url: "https://www.youtube.com/watch?v=QanZJxa1Z-M" },
+  { category: "감정", title: "Happy and Sad", desc: "감정 단어와 표정 익히기", url: "https://www.youtube.com/watch?v=QJ12c_C4lHU" },
+  { category: "감정", title: "Silly Song", desc: "감정 단어와 표정 익히기", url: "https://www.youtube.com/watch?v=k3AgFSRxr28" },
+  { category: "감정", title: "If You're Happy", desc: "감정 단어와 표정 익히기", url: "https://www.youtube.com/watch?v=l4WNrvVjiTw" },
+  { category: "감정", title: "This Is A Happy Face", desc: "나와 몸 관련 표현 익히기", url: "https://www.youtube.com/watch?v=lQZX1IIAnLw" },
+  { category: "감정", title: "Feelings", desc: "감정 단어와 표정 익히기", url: "https://www.youtube.com/watch?v=a1NIWCr0R-k" },
+  { category: "감정", title: "Feelings Song", desc: "감정 단어와 표정 익히기", url: "https://www.youtube.com/watch?v=KivttwaXQZ4" },
+
+  // 11. 기본표현 1
+  { category: "기본표현", title: "Hello!", desc: "나와 몸 관련 표현 익히기", url: "https://youtu.be/tVlcKp3bWH8" },
+  { category: "기본표현", title: "What's Your Name?", desc: "이름 묻고 답하기", url: "https://youtu.be/zMdq9jSaNLg" },
+  { category: "기본표현", title: "What's This? What's That?", desc: "사물 묻고 답하기", url: "https://youtu.be/UKNiCMrd3nU" },
+  { category: "기본표현", title: "Bye Bye Goodbye", desc: "헤어질 때 인사 익히기", url: "https://youtu.be/PraN5ZoSjiY" },
+  { category: "기본표현", title: "See You Later, Alligator", desc: "헤어질 때 인사 익히기", url: "https://youtu.be/UQfvAlmr5g0" },
+  { category: "기본표현", title: "What Do You Like To Do?", desc: "좋아하는 활동 말하기", url: "https://youtu.be/nddRGDEKxA0" },
+  { category: "기본표현", title: "Are You Hungry?", desc: "음식 관련 표현 익히기", url: "https://youtu.be/ykTR0uFGwE0" },
+  { category: "기본표현", title: "Can You Make A Happy Face?", desc: "나와 몸 관련 표현 익히기", url: "https://youtu.be/x8b4f5fhYuw" },
+  { category: "기본표현", title: "Open Shut Them", desc: "반대말과 손동작 익히기", url: "https://youtu.be/RNUZBHlRH4Y" },
+  { category: "기본표현", title: "Follow Me", desc: "따라 해보는 표현", url: "https://youtu.be/hW2DDGX7Tcc" },
+  { category: "기본표현", title: "Walking Walking", desc: "걷기와 움직임 표현", url: "https://youtu.be/fPMjnlTEZwU" },
+  { category: "기본표현", title: "Mystery Box", desc: "호기심 유도 표현", url: "https://youtu.be/4pfuapihZhI" },
+  { category: "기본표현", title: "How Do We Say Hello", desc: "인사 표현 익히기", url: "https://www.youtube.com/watch?v=p3XPRgf4qG4" },
+  { category: "기본표현", title: "Clean Up Song", desc: "정리정돈 표현 익히기", url: "https://www.youtube.com/watch?v=SFE0mMWbA-Y" },
+  { category: "기본표현", title: "Put On Your Shoes", desc: "옷 입기 표현 익히기", url: "https://www.youtube.com/watch?v=-jBfb33_KHU" },
+  { category: "기본표현", title: "Stand Up Sit Down", desc: "교실 기본 지시어 익히기", url: "https://www.youtube.com/watch?v=-iMGSD_35pM" },
+  { category: "기본표현", title: "Let's Go For A Walk Outside", desc: "바깥 활동 표현 익히기", url: "https://www.youtube.com/watch?v=BWR3DxGHLD4" },
+  { category: "기본표현", title: "Hide and Seek", desc: "놀이 표현 익히기", url: "https://www.youtube.com/watch?v=yiNWstOhc6s" },
+  { category: "기본표현", title: "I Like To Draw", desc: "좋아하는 활동 말하기", url: "https://www.youtube.com/watch?v=SU1I1EbEh8w" },
+  { category: "기본표현", title: "Sitting On The Potty", desc: "생활습관 표현 익히기", url: "https://www.youtube.com/watch?v=_RQFMyof650" },
+];
