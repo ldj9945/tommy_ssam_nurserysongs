@@ -79,6 +79,34 @@ body {
   padding: 28px 20px 60px;
 }
 
+.intro-box {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 18px 20px;
+  margin-bottom: 20px;
+}
+
+.intro-title {
+  font-weight: 700;
+  color: var(--ink);
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+
+.intro-box p {
+  margin: 0 0 8px;
+  font-size: 14px;
+  color: var(--ink-soft);
+  line-height: 1.6;
+}
+
+.intro-note {
+  font-size: 12.5px !important;
+  color: var(--blue-500) !important;
+  margin-bottom: 0 !important;
+}
+
 .tip-box {
   background: var(--blue-50);
   border: 1px solid var(--blue-100);
